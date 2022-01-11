@@ -3,7 +3,6 @@ import '@fortawesome/fontawesome-free/js/fontawesome';
 import '@fortawesome/fontawesome-free/js/solid';
 import '@fortawesome/fontawesome-free/js/regular';
 import '@fortawesome/fontawesome-free/js/brands';
-import { listHtml } from './modules/list_html';
 
 const array = [
   {
@@ -24,6 +23,20 @@ const array = [
 ];
 
 const listMarkup = document.querySelector('.to-do-list');
+
+const listHtml = (item) => ((item.completed) ? `
+        <label >
+            <input type="checkbox" name="x" checked>
+            ${item.description}
+        </label>
+        <i class="fas fa-ellipsis-v icon"></i>
+    ` : `
+    <label >
+        <input type="checkbox" name="x" >
+        ${item.description}
+    </label>
+    <i class="fas fa-ellipsis-v icon"></i>
+`);
 
 const populateToDos = () => {
   console.log(listMarkup);

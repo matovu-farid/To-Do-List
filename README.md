@@ -6,7 +6,7 @@ This a To Do list app to help keep track of tasks.
 
 ![screenshot](./to-do-screenshot.PNG)
 
-This project is my portfolio.
+This project is a to-do-list app.
 
 ## Built With
 

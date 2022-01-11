@@ -17,13 +17,13 @@ This project is my portfolio.
 
 ## Getting Started
 To get the content of this project locally you need to run this command in your terminal:
-- git clone your https://github.com/matovu-farid/My-Portfolio.git
-- cd project My-Portfolio
+- git clone your https://github.com/matovu-farid/To-Do-List.git
+- cd project To-Do-List
 
 ### Deployment
 This project is deployed on a github page on the link below:
 - https://matovu-farid.github.io/To-Do-List/
-## Authors
+## Author
 
 👤 **Matovu Farid Nkoba**
 

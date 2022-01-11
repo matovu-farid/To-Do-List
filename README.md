@@ -1,11 +1,10 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# My-Portfolio
+# To-Do-List
 
-This is My personal portfolio.
-It describes my work as software developer.
+This a To Do list app to help keep track of tasks.
 
-![screenshot](./assets/project_screenshot.png)
+![screenshot](./to-do-screenshot.PNG)
 
 This project is my portfolio.
 
@@ -13,6 +12,8 @@ This project is my portfolio.
 
 - HTML
 - CSS
+- Javascript
+- webpack
 
 ## Getting Started
 To get the content of this project locally you need to run this command in your terminal:
@@ -21,7 +22,7 @@ To get the content of this project locally you need to run this command in your 
 
 ### Deployment
 This project is deployed on a github page on the link below:
-- https://matovu-farid.github.io/My-Portfolio
+- https://matovu-farid.github.io/To-Do-List/
 ## Authors
 
 👤 **Matovu Farid Nkoba**

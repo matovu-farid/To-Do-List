@@ -9,7 +9,8 @@
     "hint": "hint .",
     "lint": "eslint . --fix",
     "build": "webpack",
-    "start": "webpack serve --open"
+    "start": "webpack serve --open",
+    "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",

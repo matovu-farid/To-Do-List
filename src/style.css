@@ -35,6 +35,8 @@ ul {
 
 
 
+
+
 .over-lay {
   background-color: white;
   z-index: 1;
@@ -53,10 +55,7 @@ ul {
   justify-content: space-between;
 }
 
-li > .icon {
-  color: rgb(235, 232, 232);
-  font-size: 15px;
-}
+
 
 .to-do-list > li:last-child {
   border-bottom: none;
@@ -90,7 +89,7 @@ li > .icon {
 #clear-completed {
   width: 100%;
   padding: 7px 0;
-  color: #d2d2d2;
+  color: #7c7c7c;
   background-color: #f6f6f6;
   border: 3px solid #f7f7f7;
 }
@@ -107,11 +106,13 @@ header > .icon {
 
 .to-do {
   padding: 7px 10px;
+  align-items: center;
 }
 
 
 .to-do input {
   margin-right: 10px;
+
   
   
 }
@@ -153,4 +154,18 @@ header > .icon {
   background-color: transparent;
   width: 280px;
   padding: 5px;
+}
+
+li  .icon {
+  color: rgb(177, 177, 177);
+  
+  font-size: 15px;
+}
+
+.selected {
+  background-color: #e0dfac;
+}
+
+.to-do .icon {
+  cursor: move;
 }

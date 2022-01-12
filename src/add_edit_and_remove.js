@@ -16,22 +16,47 @@ export const edit = (item)=>{
     array[item.index-1] = item;
     storage.save(array)
     displayList.render(array);
-    console.log(array)
 }
 
 let timeOut = null;
+export const toggleSelect=(item)=>{
+  const li = document.querySelector(`#task-${item.index}`);
+  li.classList.toggle('selected')
+}
+// export const removeSelect=(item)=>{
+//   const li = document.querySelector(`#task-${item.index}`);
+//   console.log('li',li)
+//   li.classList.toggle('selected')
+// }
 export const attachSaveOnEdit = (inputElement,item)=>{
   inputElement.addEventListener('keyup',()=>{
 
     clearTimeout(timeOut);
     timeOut = setTimeout(()=>{
+     // removeSelect(item);
       item.description = inputElement.value;
       edit(item);
-      console.log(array)
-    },1000)
+      
+    },2000)
+    
   })
 
 }
+
+
+export const attachSaveOnEditEnter = (inputElement,item)=>{
+  inputElement.addEventListener('keydown',(event)=>{
+    if(event.key==='Enter'){
+      item.description = inputElement.value;
+      edit(item);
+     // removeSelect(item)
+    }
+
+
+  })
+
+}
+
 
 const reIndex =()=>{
   array.forEach((item,index)=>{
@@ -54,12 +79,12 @@ clearButton.addEventListener('click',()=>{
 
 export const remove = (item)=>{
    array = array.filter(itemGot=> itemGot.index!==item.index);
-   
+   displayList.render(array)
    reIndex()
    storage.save(array)
   
   
-    displayList.render(array)
+     
 }
   
   

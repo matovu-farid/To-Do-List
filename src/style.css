@@ -33,6 +33,8 @@ ul {
   justify-content: center;
 }
 
+
+
 .over-lay {
   background-color: white;
   z-index: 1;
@@ -107,6 +109,42 @@ header > .icon {
   padding: 7px 10px;
 }
 
+
 .to-do input {
   margin-right: 10px;
+  
+  
+}
+
+.input {
+  border: none;
+  outline: none;
+  border-style: none;
+  resize: none;
+  background-color: transparent;
+  overflow: hidden;
+  
+}
+
+
+
+.edit-input {
+  border: none;
+  outline: none;
+  background-color: bisque;
+}
+
+
+.edit-list-item {
+  
+  background-color: bisque;
+
+}
+
+.edit-div {
+  display: flex;
+}
+
+.list-label {
+  display: flex;
 }

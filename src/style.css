@@ -148,3 +148,9 @@ header > .icon {
 .list-label {
   display: flex;
 }
+
+.input {
+  background-color: transparent;
+  width: 280px;
+  padding: 5px;
+}

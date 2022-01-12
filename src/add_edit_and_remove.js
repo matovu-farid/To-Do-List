@@ -1,23 +1,9 @@
 
 import {DisplayList} from './display_list';
-export let array = [
-    {
-      description: 'Wash clothes',
-      completed: false,
-      index: 1,
-    },
-    {
-      description: 'Wash dishes',
-      completed: false,
-      index: 2,
-    },
-    {
-      description: 'Wash car',
-      completed: false,
-      index: 3,
-    },
-    
-  ];
+import {storage} from './local_storage';
+
+
+export let array = storage.retrieve();
  
 
  
@@ -28,6 +14,7 @@ displayList.render(array);
 
 export const edit = (item)=>{
     array[item.index-1] = item;
+    storage.save(array)
     displayList.render(array);
     console.log(array)
 }
@@ -46,8 +33,16 @@ export const attachSaveOnEdit = (inputElement,item)=>{
 
 }
 
+const reIndex =()=>{
+  array.forEach((item,index)=>{
+    item.index = index+1;
+})
+}
+
 const clearCompleted = ()=>{
  array = array.filter(task=>task.completed===false)
+ reIndex()
+ storage.save(array)
  displayList.render(array)
 }
 const clearButton = document.querySelector('#clear-completed')
@@ -55,11 +50,13 @@ clearButton.addEventListener('click',()=>{
   clearCompleted()
 })
 
+
+
 export const remove = (item)=>{
    array = array.filter(itemGot=> itemGot.index!==item.index);
-   array.forEach((item,index)=>{
-       item.index = index;
-   })
+   
+   reIndex()
+   storage.save(array)
   
   
     displayList.render(array)
@@ -72,8 +69,9 @@ export const remove = (item)=>{
         completed: false,
         index: array.length+1,
       };
-      array.push(item)
+        array.push(item);
         taskInput.value = '';
+        storage.save(array)
 
         displayList.render(array)
         

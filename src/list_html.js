@@ -1,4 +1,4 @@
-import { div } from 'prelude-ls';
+
 import {attachSaveOnEdit, edit, remove} from './add_edit_and_remove'
 
 export const listMarkup = document.querySelector('.to-do-list');
@@ -7,7 +7,7 @@ export const listMarkup = document.querySelector('.to-do-list');
 
 export const listHtml = (item) => `
         <label  class="list-label">
-            <div class="place-holder"></div>
+            <div class="place-holder centered-box"></div>
             <textarea readonly rows=1 id="text-${item.index}"  class="input">${item.description}</textarea>
            
         </label>

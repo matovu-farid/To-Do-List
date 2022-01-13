@@ -162,8 +162,12 @@ li  .icon {
   font-size: 15px;
 }
 
-.selected {
+.select {
   background-color: #e0dfac;
+}
+
+.unselected {
+  background-color: transparent;
 }
 
 .to-do .icon {

@@ -1,26 +1,38 @@
-import {listMarkup,createListItem} from './list_html';
+import {ListItemMarkup} from './list_html'
 
 
-
-export  class DisplayList {
-    constructor(aray){
-        
-    }
-
-  #clear = ()=>{
-     listMarkup.innerHTML = ''
- }
-
-  #populateToDos = (array) => {
- 
-   array.forEach((item) => {
+const listMarkup = document.querySelector('.to-do-list');
+export class DisplayList {
+  constructor(listmanager) {
+    this.listmanager = listmanager;
     
-     listMarkup.appendChild(createListItem(item));
-   });
- };
- 
- render=(array)=>{
-     this.#clear();
-     this.#populateToDos(array)
+  }
+
+  #clear = () => {
+    listMarkup.innerHTML = '';
+  }
+  #clearSelect = () => {
+    const lis = document.querySelectorAll(`li`);
+    lis.forEach(li=>{
+      li.className = 'to-do'
+    })
+  };
+  #populateToDos = () => {
+    const array = this.listmanager.array
+    array.forEach((item)=>{
+      let markup = new ListItemMarkup(item,this.listmanager);
+      let listItem= markup.createListItem()
+      listMarkup.appendChild(listItem);
+    });
+    setTimeout(this.#clearSelect,200)
+
+      
+    
+  };
+
+ render=() => {
+   this.#clear();
+   this.#populateToDos();
  }
 }
+

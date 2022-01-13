@@ -10,4 +10,4 @@ export default class LocalStorageManager {
       return array;
     }
 }
-export const storage = new LocalStorageManager()
+export const storage = new LocalStorageManager();

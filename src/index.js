@@ -4,7 +4,7 @@ import '@fortawesome/fontawesome-free/js/solid';
 import '@fortawesome/fontawesome-free/js/regular';
 import '@fortawesome/fontawesome-free/js/brands';
 
-// import {listManager} from './list_manager'
+
 import ListListeners from './list_listeners';
 import DisplayList from './display_list';
 import ListManager from './list_manager';

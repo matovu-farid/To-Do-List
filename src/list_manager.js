@@ -27,21 +27,24 @@ export default class ListManager {
          const listItems = document.querySelectorAll('.to-do');
          listItems.forEach((listItem, index) => {
            listItem.id = `task-${index + 1}`;
-           // listItem.classList.remove('selected')
+           
          });
        };
 
         addTask = (taskInput) => {
-          const item = {
-            description: taskInput.value,
-            completed: false,
-            index: this.array.length + 1,
-          };
-          this.array.push(item);
-          taskInput.value = '';
-          this.storage.save(this.array);
+          if(taskInput.value!==''){
 
-          this.displayList.render(this.array);
+            const item = {
+              description: taskInput.value,
+              completed: false,
+              index: this.array.length + 1,
+            };
+            this.array.push(item);
+            taskInput.value = '';
+            this.storage.save(this.array);
+  
+            this.displayList.render(this.array);
+          }
         };
 
        edit = (item) => {

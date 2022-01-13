@@ -17,7 +17,7 @@ export default class ListItemMarkup {
        const deleteIcon = document.createElement('div');
        deleteIcon.innerHTML = '<i class="far fa-trash-alt icon" aria-hidden="true"></i>';
        deleteIcon.addEventListener('click', () => {
-         // this.#replaceSelected(this.item)
+         
          this.manager.remove(this.item);
        });
        return deleteIcon;

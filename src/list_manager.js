@@ -27,13 +27,11 @@ export default class ListManager {
          const listItems = document.querySelectorAll('.to-do');
          listItems.forEach((listItem, index) => {
            listItem.id = `task-${index + 1}`;
-           
          });
        };
 
         addTask = (taskInput) => {
-          if(taskInput.value!==''){
-
+          if (taskInput.value !== '') {
             const item = {
               description: taskInput.value,
               completed: false,
@@ -42,7 +40,7 @@ export default class ListManager {
             this.array.push(item);
             taskInput.value = '';
             this.storage.save(this.array);
-  
+
             this.displayList.render(this.array);
           }
         };

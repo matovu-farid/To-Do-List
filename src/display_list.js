@@ -18,7 +18,7 @@ export default class DisplayList {
   };
 
   #populateToDos = () => {
-    const { array } = this.listmanager;
+    const array = this.listmanager;
     array.forEach((item) => {
       const markup = new ListItemMarkup(item, this.listmanager);
       const listItem = markup.createListItem();

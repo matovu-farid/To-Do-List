@@ -1,6 +1,4 @@
-import ListManager from './list_manager';
-
-const listManager = new ListManager();
+import { listManager } from './list_manager';
 
 export const editTask = (task) => listManager.edit(task);
 export const removeTask = (task) => listManager.remove(task);

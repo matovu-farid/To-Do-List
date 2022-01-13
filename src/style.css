@@ -33,10 +33,6 @@ ul {
   justify-content: center;
 }
 
-
-
-
-
 .over-lay {
   background-color: white;
   z-index: 1;
@@ -54,8 +50,6 @@ ul {
   display: flex;
   justify-content: space-between;
 }
-
-
 
 .to-do-list > li:last-child {
   border-bottom: none;
@@ -109,12 +103,8 @@ header > .icon {
   align-items: center;
 }
 
-
 .to-do input {
   margin-right: 10px;
-
-  
-  
 }
 
 .input {
@@ -124,10 +114,9 @@ header > .icon {
   resize: none;
   background-color: transparent;
   overflow: hidden;
-  
+  width: 280px;
+  padding: 5px;
 }
-
-
 
 .edit-input {
   border: none;
@@ -135,11 +124,8 @@ header > .icon {
   background-color: bisque;
 }
 
-
 .edit-list-item {
-  
   background-color: bisque;
-
 }
 
 .edit-div {
@@ -150,15 +136,8 @@ header > .icon {
   display: flex;
 }
 
-.input {
-  background-color: transparent;
-  width: 280px;
-  padding: 5px;
-}
-
-li  .icon {
+li .icon {
   color: rgb(177, 177, 177);
-  
   font-size: 15px;
 }
 

@@ -5,7 +5,7 @@
 This a To Do list app to help keep track of tasks.
 
 ## Description
-A task management app that allows adding and removing tasks to a to do list.The data is stored locally in the browser local storage. It is built with Javascript,html and css.
+A task management app that allows adding and removing tasks to a to-do list. The data is stored locally in the browser local storage therefore it persists when the user closes the browser. It is built with JavaScript, HTML and CSS.
 
 ![screenshot](./to-do-screenshot.PNG)
 
